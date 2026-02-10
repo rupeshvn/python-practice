@@ -6,3 +6,6 @@ Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36
 
 def square_digits(num):
     return int(''.join(str(int(i)**2) for i in list(str(num))))
+
+value = square_digits(1234)
+print(value)
