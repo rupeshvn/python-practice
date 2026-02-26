@@ -1,0 +1,3 @@
+DBMS (Database Management System) is an interface between database and the end user
+Types of Databases:
+    1. 
