@@ -1,0 +1,20 @@
+check_val = "("
+def check_valid_parenthesis(val):
+    bracket_checker = {"(":")","{":"}","[":"]"}
+    order_checker = []
+    i = 0
+    for i in range(len(val)):
+        if val[i] in bracket_checker.keys():
+            order_checker.append(bracket_checker.get(val[i]))
+        elif order_checker:
+            req_val = order_checker.pop()
+            if req_val != val[i]:
+                return False
+        else:
+            return False
+    if order_checker:
+        return False
+    return True
+
+check_par = check_valid_parenthesis(check_val)
+print(check_par)
